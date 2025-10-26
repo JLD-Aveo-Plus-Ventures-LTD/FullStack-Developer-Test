@@ -19,3 +19,16 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 3. Edit the ./app/page.tsx file - you can add other files for new react components if you'd like - making a page as close as possible to the design shown. The page should display the images and have a button that reverses the sorting
 4. Use the hook useGalleryData (`./lib/useGalleryData') to load the image data - but BEWARE, the JSON data used by the hook has a problem, please fix that!
 5. **IMPORTANT** - please make meaningful commits at multiple points in your process, however please **DO NOT PUSH** commits to `origin` until the end of the day (to avoid other candidates gaining access to your work)
+
+# Additional Backend Task
+
+Alongside the front-end gallery exercise, candidates should complete a small Node.js backend assignment that focuses on JWT-based authentication. The goal is to build and document an Express.js API, leaving implementation details for the candidate:
+
+1. **Seeded user**: Initialize the app with a single user whose password is stored as a bcrypt hash (in-memory or via a simple JSON file).
+2. **Login endpoint**: Implement `POST /auth/login` to validate credentials and return a signed access JWT that includes the user ID and role.
+3. **Refresh endpoint**: Implement `POST /auth/refresh` that accepts a refresh token (store refresh tokens in memory during runtime) and issues a new access token when valid.
+4. **Protected profile**: Implement `GET /profile`, guarded by middleware that checks the `Authorization` bearer token, returning the user’s public details when the token is valid.
+5. **JWT middleware**: Create reusable middleware to verify JWTs, attach the decoded payload to `req.user`, and respond with appropriate HTTP status codes for errors or expired tokens.
+6. **Instructions**: Update the README with concise steps showing how to run the server and test the endpoints using curl or Postman.
+
+Leave the task unsolved so that candidates can demonstrate their implementation and understanding during the exercise.
