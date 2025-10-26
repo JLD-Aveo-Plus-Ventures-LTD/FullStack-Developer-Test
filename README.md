@@ -22,7 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 # Additional Backend Task
 
-Alongside the front-end gallery exercise, candidates should complete a small Node.js backend assignment that focuses on JWT-based authentication. The goal is to build and document an Express.js API, leaving implementation details for the candidate:
+Alongside the front-end gallery exercise, you are to complete a small Node.js backend assignment that focuses on JWT-based authentication. The goal is to build and document an Express.js API, leaving implementation details for you:
 
 1. **Seeded user**: Initialize the app with a single user whose password is stored as a bcrypt hash (in-memory or via a simple JSON file).
 2. **Login endpoint**: Implement `POST /auth/login` to validate credentials and return a signed access JWT that includes the user ID and role.
@@ -31,4 +31,4 @@ Alongside the front-end gallery exercise, candidates should complete a small Nod
 5. **JWT middleware**: Create reusable middleware to verify JWTs, attach the decoded payload to `req.user`, and respond with appropriate HTTP status codes for errors or expired tokens.
 6. **Instructions**: Update the README with concise steps showing how to run the server and test the endpoints using curl or Postman.
 
-Leave the task unsolved so that candidates can demonstrate their implementation and understanding during the exercise.
+You would be expected to demonstrate your implementation and understanding during the exercise.
